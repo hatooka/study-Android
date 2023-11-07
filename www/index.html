@@ -18,35 +18,54 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://dog.ceo/api/breeds/image/random https://official-joke-api.appspot.com/jokes/random data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is AAAAA</p>
-                <button>押してみ</button>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+        https://cordova.apache.org/docs/en/latest/
+    Some notes:
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' 'unsafe-inline' http://api.openweathermap.org/ https://dog.ceo/api/breeds/image/random https://official-joke-api.appspot.com/jokes/random
+          data: https://ssl.gstatic.com 'unsafe-eval';
+           script-src 'self' 'unsafe-inline';
+           style-src 'self' 'unsafe-inline';
+           media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Hello World</title>
+</head>
+<body>
+<div class="app">
+    <h1>Apache Cordova</h1>
+    <div id="deviceready">
+        <p class="event listening">Connecting to Device</p>
+        <p class="event received">Device is AAAAA</p>
+        <div>都市名：<input type="text" size="40" placeholder="都市名を入力してください" id="cityName">
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    <script src="js/calAPI.js"></script>
-    </body>
+        <label>都市:
+            <div id="city"></div>
+        </label><br>
+        <label>最高気温:
+            <div id="maxTemp"></div>
+        </label><br>
+        <label>最低気温:
+            <div id="minTemp"></div>
+        </label><br>
+        <label>天気:
+            <div id="weather"></div>
+        </label><br>
+        <button id="button" onclick="callWeatherApi()">押してみ</button>
+    </div>
+</div>
+<script src="cordova.js"></script>
+<script src="js/index.js"></script>
+<script src="js/calAPI.js"></script>
+</body>
 </html>
