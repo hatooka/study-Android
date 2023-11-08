@@ -47,21 +47,22 @@
     <div id="deviceready">
         <p class="event listening">Connecting to Device</p>
         <p class="event received">Device is AAAAA</p>
-        <div>都市名：<input type="text" size="40" placeholder="都市名を入力してください" id="cityName">
-        </div>
+        <div id ="ResponseText"></div>
+        <label>都市名：<input type="text" size="20" placeholder="都市名を入力してください" id="cityName">
+        </label><br>
         <label>都市:
-            <div id="city"></div>
+            <label id="city"></label>
         </label><br>
         <label>最高気温:
-            <div id="maxTemp"></div>
+            <label id="maxTemp"></label>
         </label><br>
         <label>最低気温:
-            <div id="minTemp"></div>
+            <label id="minTemp"></label>
         </label><br>
         <label>天気:
-            <div id="weather"></div>
+            <label id="weather"></label>
         </label><br>
-        <button id="button" onclick="callWeatherApi()">押してみ</button>
+        <button id="button" onclick="clickButton()">APIリクエスト</button>
     </div>
 </div>
 <script src="cordova.js"></script>
