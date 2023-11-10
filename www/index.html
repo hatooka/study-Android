@@ -39,30 +39,40 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Hello World</title>
 </head>
 <body>
-<div class="app">
-    <h1>Apache Cordova</h1>
-    <div id="deviceready">
-        <p class="event listening">Connecting to Device</p>
-        <p class="event received">Device is AAAAA</p>
-        <div id ="ResponseText"></div>
-        <label>都市名：<input type="text" size="20" placeholder="都市名を入力してください" id="cityName">
-        </label><br>
-        <label>都市:
-            <label id="city"></label>
-        </label><br>
-        <label>最高気温:
-            <label id="maxTemp"></label>
-        </label><br>
-        <label>最低気温:
-            <label id="minTemp"></label>
-        </label><br>
-        <label>天気:
-            <label id="weather"></label>
-        </label><br>
-        <button id="button" onclick="clickButton()">APIリクエスト</button>
+<div>
+    <div class="container">
+        <div class="input-container">
+            <label>都市名：<input type="text" size="20" placeholder="都市名を入力してください"
+                                 id="cityName">
+            </label><br>
+        </div>
+        <div class="input-container">
+            <label>都市:
+                <label id="city"></label>
+            </label><br>
+        </div>
+        <div class="input-container">
+            <label>最高気温:
+                <label id="maxTemp"></label>
+            </label><br>
+        </div>
+        <div class="input-container">
+            <label>最低気温:
+                <label id="minTemp"></label>
+            </label><br>
+        </div>
+        <div class="input-container">
+            <label>天気:
+                <label id="weather"></label>
+            </label><br>
+        </div>
+        <div class="input-container">
+            <button id="button" onclick="clickButton()">APIリクエスト</button>
+        </div>
     </div>
 </div>
 <script src="cordova.js"></script>

@@ -1,0 +1,34 @@
+
+.container {
+    border-radius: 150px 20px 220px 30px / 15px 150px 50px 250px;
+    border: 6px solid #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: aliceblue;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.input-container {
+    display: flex;
+    width: auto;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-container label{
+    white-space: nowrap;
+    font-size: 20px;
+    width: 100%;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input-container button {
+    border-radius: 10px 20px 10px 20px/ 20px 30px 20px 40px;
+    background-color: slategray;
+    font-size: 20px;
+    width: 200px;
+}
